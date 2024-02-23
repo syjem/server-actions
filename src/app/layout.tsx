@@ -1,12 +1,11 @@
 import type { Metadata } from 'next';
-import { Inter as FontSans } from 'next/font/google';
+import { Montserrat } from 'next/font/google';
 import './globals.css';
 import { cn } from '@/lib/utils';
 import { Toaster } from '@/components/ui/sonner';
 
-export const fontSans = FontSans({
+export const montserrat = Montserrat({
   subsets: ['latin'],
-  variable: '--font-sans',
 });
 
 export const metadata: Metadata = {
@@ -24,7 +23,7 @@ export default function RootLayout({
       <body
         className={cn(
           'min-h-screen bg-slate-200 font-sans antialiased',
-          fontSans.variable
+          montserrat.className
         )}>
         {children}
         <Toaster />
