@@ -1,12 +1,10 @@
 import type { Metadata } from 'next';
-import { Montserrat } from 'next/font/google';
+import { Inter } from 'next/font/google';
 import './globals.css';
 import { cn } from '@/lib/utils';
 import { Toaster } from '@/components/ui/sonner';
 
-export const montserrat = Montserrat({
-  subsets: ['latin'],
-});
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -23,7 +21,7 @@ export default function RootLayout({
       <body
         className={cn(
           'min-h-screen bg-slate-200 font-sans antialiased',
-          montserrat.className
+          inter.className
         )}>
         {children}
         <Toaster />
